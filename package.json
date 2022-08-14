@@ -1,32 +1,29 @@
 {
+  "name": "dts-demo",
   "version": "0.1.0",
   "license": "MIT",
+  "author": "shivam123425",
   "main": "dist/index.js",
+  "module": "dist/dts-demo.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
     "dist",
     "src"
   ],
-  "engines": {
-    "node": ">=10"
-  },
   "scripts": {
-    "start": "tsdx watch",
-    "build": "tsdx build",
-    "test": "tsdx test --passWithNoTests",
-    "lint": "tsdx lint",
-    "prepare": "tsdx build",
-    "size": "size-limit",
     "analyze": "size-limit --why",
+    "build": "dts build",
+    "build-storybook": "build-storybook",
+    "lint": "dts lint",
+    "prepare": "dts build",
+    "size": "size-limit",
+    "start": "dts watch",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  },
-  "peerDependencies": {
-    "react": ">=16"
+    "test": "dts test --passWithNoTests"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "dts lint"
     }
   },
   "prettier": {
@@ -35,16 +32,22 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "flicker-show-design-system",
-  "author": "shivam123425",
-  "module": "dist/flicker-show-design-system.esm.js",
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "engines": {
+    "node": ">=12"
+  },
   "size-limit": [
     {
-      "path": "dist/flicker-show-design-system.cjs.production.min.js",
+      "path": "dist/dts-demo.cjs.production.min.js",
       "limit": "10 KB"
     },
     {
-      "path": "dist/flicker-show-design-system.esm.js",
+      "path": "dist/dts-demo.esm.js",
       "limit": "10 KB"
     }
   ],
@@ -56,15 +59,17 @@
     "@storybook/addon-links": "^6.5.10",
     "@storybook/addons": "^6.5.10",
     "@storybook/react": "^6.5.10",
+    "@tsconfig/create-react-app": "^1.0.2",
+    "@tsconfig/recommended": "^1.0.1",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
     "babel-loader": "^8.2.5",
+    "dts-cli": "^1.5.2",
     "husky": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
     "size-limit": "^8.0.1",
-    "tsdx": "^0.14.1",
     "tslib": "^2.4.0",
     "typescript": "^4.7.4"
   },
