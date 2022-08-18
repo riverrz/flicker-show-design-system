@@ -16,14 +16,21 @@ export const {
       primary: '#e50914',
       black: '#000',
       white: '#fff',
-      gray: '#333',
+      darkGray: '#333',
+      gray: '#454545',
+      lightGray: '#8c8c8c',
       blue: '#0071eb',
+      orange: '#e87c03',
     },
     space: {
       1: '4px',
       2: '8px',
       3: '12px',
       4: '16px',
+      5: '20px',
+    },
+    fontSizes: {
+      1: '16px',
     },
   },
   media: {
