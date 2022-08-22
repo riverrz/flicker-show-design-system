@@ -6,6 +6,9 @@ export const InputContainer = styled('div', {
 });
 export const InputLabelContainer = styled('div', {
   position: 'relative',
+  backgroundColor: '$darkGray',
+  borderRadius: 4,
+  overflow: 'hidden',
   variants: {
     error: {
       true: {
@@ -40,12 +43,11 @@ export const Label = styled('label', {
 export const StyledInput = styled('input', {
   display: 'block',
   width: '100%',
-  backgroundColor: '$darkGray',
+  backgroundColor: 'transparent',
   fontSize: '$1',
   boxShadow: 'none',
   outline: 'none',
   border: 0,
-  borderRadius: 4,
   color: '$white',
   height: 50,
   lineHeight: 50,
@@ -55,7 +57,7 @@ export const StyledInput = styled('input', {
   '&:focus': {
     backgroundColor: '$gray',
   },
-  [`&:focus~${Label}`]: {
+  [`&:focus~${Label}, &[data-has-text="true"]~${Label}`]: {
     fontSize: 11,
     transform: 'translateY(0)',
     top: 7,
