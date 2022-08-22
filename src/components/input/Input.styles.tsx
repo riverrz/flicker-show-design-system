@@ -3,12 +3,17 @@ import { styled } from '../../lib/style';
 export const InputContainer = styled('div', {
   position: 'relative',
   width: '100%',
-});
-export const InputLabelContainer = styled('div', {
-  position: 'relative',
   backgroundColor: '$darkGray',
   borderRadius: 4,
   overflow: 'hidden',
+  display: 'flex',
+  '&:focus-within': {
+    backgroundColor: '$gray',
+  },
+});
+export const InputLabelContainer = styled('div', {
+  position: 'relative',
+  flex: 1,
   variants: {
     error: {
       true: {
@@ -40,6 +45,19 @@ export const Label = styled('label', {
   transition: 'font .1s ease,top .1s ease,transform .1s ease',
 });
 
+export const Adornment = styled('button', {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  height: 50,
+  background: 'transparent',
+  outline: 'none',
+  border: 'none',
+  cursor: 'pointer',
+  padding: '$3',
+  color: '$lightGray'
+});
+
 export const StyledInput = styled('input', {
   display: 'block',
   width: '100%',
@@ -50,13 +68,9 @@ export const StyledInput = styled('input', {
   border: 0,
   color: '$white',
   height: 50,
-  lineHeight: 50,
+  lineHeight: '50px',
   padding: '$4 $5 0',
   position: 'relative',
-  boxSizing: 'border-box',
-  '&:focus': {
-    backgroundColor: '$gray',
-  },
   [`&:focus~${Label}, &[data-has-text="true"]~${Label}`]: {
     fontSize: 11,
     transform: 'translateY(0)',

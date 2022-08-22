@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import {
   InputContainer,
   Label,
   StyledInput,
   StyledInputError,
   InputLabelContainer,
+  Adornment,
 } from './Input.styles';
 
 interface Props extends React.ComponentPropsWithRef<typeof StyledInput> {
@@ -14,12 +15,25 @@ interface Props extends React.ComponentPropsWithRef<typeof StyledInput> {
   id: string;
   value: string;
   onChange: React.ChangeEventHandler<HTMLInputElement>;
+  startAdornment?: ReactNode;
+  endAdornment?: ReactNode;
 }
 
 export const Input = (props: Props) => {
-  const { label, error, errorMsg, id, value, onChange, ...inputProps } = props;
+  const {
+    label,
+    startAdornment,
+    endAdornment,
+    error,
+    errorMsg,
+    id,
+    value,
+    onChange,
+    ...inputProps
+  } = props;
   return (
     <InputContainer>
+      {startAdornment && <Adornment>{startAdornment}</Adornment>}
       <InputLabelContainer error={error}>
         <StyledInput
           {...inputProps}
@@ -30,6 +44,7 @@ export const Input = (props: Props) => {
         />
         <Label htmlFor={id}>{label}</Label>
       </InputLabelContainer>
+      {endAdornment && <Adornment>{endAdornment}</Adornment>}
       {error && <StyledInputError>{errorMsg}</StyledInputError>}
     </InputContainer>
   );

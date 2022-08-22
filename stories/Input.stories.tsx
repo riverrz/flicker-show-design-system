@@ -42,3 +42,21 @@ Default.args = {
   label: 'Email or phone number',
   id: 'emailOrPhone',
 };
+
+export const StartAdornment = Template.bind({});
+
+StartAdornment.args = {
+  onChange: onInputChange,
+  label: 'Email or phone number',
+  id: 'emailOrPhone',
+  startAdornment: 'SHOW',
+};
+
+export const EndAdornment = Template.bind({});
+
+EndAdornment.args = {
+  onChange: onInputChange,
+  label: 'Email or phone number',
+  id: 'emailOrPhone',
+  endAdornment: 'SHOW',
+};
