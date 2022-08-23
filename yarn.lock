@@ -4201,6 +4201,14 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
+beautiful-react-hooks@^3.11.1:
+  version "3.11.1"
+  resolved "https://registry.yarnpkg.com/beautiful-react-hooks/-/beautiful-react-hooks-3.11.1.tgz#2bcbf726a77993b3f454ff48867a4cced3d213fd"
+  integrity sha512-uXeli3YYvo15+5xFvRm/rpBtVQ1SrelVTDKPZAlBWhaY8FXQegjKpWC1TjUL5noBMtWjDtx/rPaoCNlRtqJO0g==
+  dependencies:
+    lodash.debounce "^4.0.8"
+    lodash.throttle "^4.1.1"
+
 better-opn@^2.1.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/better-opn/-/better-opn-2.1.1.tgz#94a55b4695dc79288f31d7d0e5f658320759f7c6"
