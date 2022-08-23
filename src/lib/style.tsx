@@ -35,9 +35,9 @@ export const {
   },
   media: {
     xs: '(max-width: 480px)',
-    sm: '(min-width: 640px)',
-    md: '(min-width: 768px)',
-    lg: '(min-width: 1024px)',
+    sm: '(max-width: 640px)',
+    md: '(max-width: 768px)',
+    lg: '(max-width: 1024px)',
   },
   utils: {
     marginX: (value: number | string) => ({
@@ -63,7 +63,7 @@ export const normalizeCSS = () =>
   globalCss({
     '*': { margin: 0, padding: 0, boxSizing: 'border-box' },
     html: { width: '100%', height: '100%' },
-    body: { width: '100%', height: '100%' },
+    body: { width: '100%', height: '100%', userSelect: 'none' },
   });
 
 export const SSRHydrate = () => {
