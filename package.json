@@ -44,11 +44,11 @@
   "size-limit": [
     {
       "path": "dist/dts-demo.cjs.production.min.js",
-      "limit": "10 KB"
+      "limit": "1 MB"
     },
     {
       "path": "dist/dts-demo.esm.js",
-      "limit": "10 KB"
+      "limit": "1 MB"
     }
   ],
   "devDependencies": {
